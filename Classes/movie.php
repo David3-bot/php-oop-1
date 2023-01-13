@@ -1,9 +1,17 @@
 <?php
-class movie {
+class Movie {
     private $title;
     private $genre;
     private $actors;
     private $director;
+
+    function __construct($_title, $_genre, $_actors, $_director)
+    {
+        $this-> setTitle($_title);
+        $this-> setGenre($_genre);
+        $this-> setActors($_actors);
+        $this-> setDirector($_director);
+    }
 
     /**
      * Get the value of title
@@ -18,9 +26,9 @@ class movie {
      *
      * @return  self
      */ 
-    public function setTitle($title)
+    public function setTitle($_title)
     {
-        $this->title = $title;
+        $this->title = $_title;
 
         return $this;
     }
@@ -38,9 +46,9 @@ class movie {
      *
      * @return  self
      */ 
-    public function setGenre($genre)
+    public function setGenre($_genre)
     {
-        $this->genre = $genre;
+        $this->genre = $_genre;
 
         return $this;
     }
@@ -58,9 +66,9 @@ class movie {
      *
      * @return  self
      */ 
-    public function setActors($actors)
+    public function setActors($_actors)
     {
-        $this->actors = $actors;
+        $this->actors = $_actors;
 
         return $this;
     }
@@ -78,9 +86,9 @@ class movie {
      *
      * @return  self
      */ 
-    public function setDirector($director)
+    public function setDirector($_director)
     {
-        $this->director = $director;
+        $this->director = $_director;
 
         return $this;
     }
